@@ -22,7 +22,7 @@
 .right {
   flex: 1;
 }
-.right{
+.right {
   margin-top: 30px;
 }
 .formWrapper {
@@ -85,43 +85,44 @@ button {
   margin: 1.8rem 0rem;
   font-size: 1.2rem;
   text-align: center;
-  transition: transform .3s ease-out, background-color .3s, box-shadow .4s, -webkit-transform .3s ease-out;
+  transition: transform 0.3s ease-out, background-color 0.3s, box-shadow 0.4s,
+    -webkit-transform 0.3s ease-out;
 }
 
-button:hover{
+button:hover {
   background-color: black;
   color: #0a5c97;
-  border:  1px solid #0a5c97;
+  border: 1px solid #0a5c97;
   transform: scale(1.1);
 }
 
- .logo{
+.logo {
   width: 100%;
-  margin-top : 50px;
- }
- .logo img{
+  margin-top: 50px;
+}
+.logo img {
   width: 70%;
-    height: 100%;
-    margin: 0px 75px;
- }
+  height: 100%;
+  margin: 0px 75px;
+}
 
- @media screen and (max-width:450px) {
-  .container{
+@media screen and (max-width: 450px) {
+  .container {
     margin: 0;
   }
-  .wrapper{
+  .wrapper {
     width: 80%;
     display: block;
   }
-  .logo img{
-      margin: 0px 39px;
-   }
-  .heading {
-  
-    font-size: 2rem;
-    margin-bottom: 0;
+  .logo img {
+    margin: 0px 39px;
   }
-  .left{
+  .heading {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+  }
+  .left {
     margin-bottom: 80px;
   }
   .left p {
@@ -129,7 +130,6 @@ button:hover{
     padding-top: 5px;
   }
   .formWrapper {
-  
     width: 90%;
     margin: auto;
   }
@@ -138,24 +138,21 @@ button:hover{
     justify-content: space-between;
     margin-bottom: 1rem;
   }
-  
+
   .formWrapper label {
     font-size: 1.1rem;
   }
   .formWrapper input,
-.inputDisplayBlock textArea {
-  font-size: 1.1rem;
- 
-  
+  .inputDisplayBlock textArea {
+    font-size: 1.1rem;
+  }
+  .formWrapper:last-child {
+  }
+  button {
+    height: 3.2rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
 }
-.formWrapper:last-child{}
-button {
-
-  height: 3.2rem;
-  border-radius: 0.5rem;
-  margin: 1rem 0rem;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-}
-
- }

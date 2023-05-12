@@ -131,7 +131,7 @@
     }
     .front_content .front_title h1{
       
-        font-size: 30px;
+        font-size: 25px;
       
         /* animation-delay: 5s; */
         
@@ -139,7 +139,7 @@
     .Front_p{
         width: 75%;
         color: white;
-        font-size: 20px;
+        font-size: 18px;
     }
     .slick-slide img {
         max-height: 330px;
