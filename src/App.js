@@ -126,10 +126,10 @@ function App() {
             <Route  path="/about" element= {<About isDarkMode={isDarkMode}/>} />
             <Route  path="/services" element= {<Service isDarkMode={isDarkMode} currentService={currentService} setCurrentService={setCurrentService}/>} />
             <Route  path="/customer_stories" element= {<Customer isDarkMode={isDarkMode}/>} />
-            <Route  path ="/Careers" element = {<Careers index={index} setIndex={setIndex} data={data}/>}/>
-            <Route  path = "/ContactUs" element = {<Contact isDarkMode={isDarkMode}/>}/>
+            <Route  path ="/career" element = {<Careers index={index} setIndex={setIndex} data={data}/>}/>
+            <Route  path = "/contact" element = {<Contact isDarkMode={isDarkMode}/>}/>
             <Route  path = "/apply" element = {<Form isDarkMode={isDarkMode} data={data} index={index}/>}/>
-            <Route  path = "/Careers/:id" element = {<Vacancies index={index} data={data}/>}/>
+            <Route  path = "/career/:id" element = {<Vacancies index={index} data={data}/>}/>
             <Route   element = {<div>Page not found</div>}></Route>
           </Routes>
           <Footer />

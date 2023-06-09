@@ -36,8 +36,8 @@ function Navbar({isDarkMode,setIsDarkMode}) {
                 <li><Link to="/services">Services</Link></li>
                 <li><Link to="/customer_stories">Customer Stories</Link></li>
                 <li><Link to="/about/#about">About Us</Link></li>
-                <li><Link to="/Careers">Careers</Link></li>
-                <li><Link to="/ContactUs">Contact</Link></li>
+                <li><Link to="/career">Careers</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
         </nav>
         <nav className='mobile-device'>
@@ -55,8 +55,8 @@ function Navbar({isDarkMode,setIsDarkMode}) {
                   <span onClick={handleOpen}><Link to="/services">Services</Link></span>
                   <span onClick={handleOpen}><Link to="/customer_stories">Customer Stories</Link></span>
                   <span onClick={handleOpen}><Link to="/about">About Us</Link></span>
-                  <span onClick={handleOpen}><Link to="/Careers">Careers</Link></span>
-                  <span onClick={handleOpen}><Link to="/ContactUs">Contact</Link></span>
+                  <span onClick={handleOpen}><Link to="/career">Careers</Link></span>
+                  <span onClick={handleOpen}><Link to="/contact">Contact</Link></span>
                 </div>
               </div>
             </div>

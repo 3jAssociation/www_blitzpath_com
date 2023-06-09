@@ -6,7 +6,7 @@ function Job({index,id,responsibilities,qualifications,setIndex,job_description}
 
   const handleProceed = (e) => {
     setIndex(id)
-    history(`/Careers/${id}`);
+    history(`/career/${id}`);
   };
   useEffect(() => {
     window.scrollTo(0, 0);
