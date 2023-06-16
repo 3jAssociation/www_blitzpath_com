@@ -1,0 +1,57 @@
+name: "Deploy (Prod/Beta) Website"
+
+on:
+ workflow_dispatch:
+  inputs:
+   deploy-prod:
+    description: ''
+    required: true
+    type: boolean
+    default: false
+   deploy-beta:
+    description: ''
+    required: true
+    type: boolean
+    default: true
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    defaults:
+      run:
+        shell: bash
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "Build frontend"
+        run: |
+          npm install
+          CI=false npm run build
+          
+      - name: Deploy Prod
+        uses: aimed-labs/deploy-docker-compose-action@main
+        if: ${{ inputs.deploy-prod }}
+        with:
+          project-name: 'langing_website'
+          working-directory: ./app
+          host-address: ${{ secrets.REPO__SERVER_IP }}
+          host-ssh-user: ${{ secrets.REPO__SERVER_USER }}
+          filter: 'label=AIMED_LABS=true'
+          docker-file-name: 'docker-compose.prod.yml'
+          ssh-private-key-base64: ${{ secrets.REPO__SERVER_SSH_PRIVATE_KEY_BASE64 }}
+          
+      - name: Deploy Beta
+        uses: aimed-labs/deploy-docker-compose-action@main
+        if: ${{ inputs.deploy-prod }}
+        with:
+          project-name: 'langing_website'
+          working-directory: ./app
+          host-address: ${{ secrets.REPO__SERVER_IP }}
+          host-ssh-user: ${{ secrets.REPO__SERVER_USER }}
+          filter: 'label=AIMED_LABS=true'
+          docker-file-name: 'docker-compose.beta.yml'
+          ssh-private-key-base64: ${{ secrets.REPO__SERVER_SSH_PRIVATE_KEY_BASE64 }}
