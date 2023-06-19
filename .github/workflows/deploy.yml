@@ -32,9 +32,10 @@ jobs:
           npm install --force
           CI=false npm run build
 
-      - name: Copy .htaccess
-        run: |
-          cp .htaccess www_blitzpath_com/.htaccess
+          echo "RewriteEngine on" >> .htaccess
+          echo "RewriteBase /" >> .htaccess
+          echo "RewriteCond %{HTTP_HOST} ^blitzpath.in [NC]" >> .htaccess
+          echo "RewriteRule ^(.*)$ http://www.blitzpath.in/$1 [R=301,L]" >> .htaccess
 
       - name: Deploy Prod
         uses: aimed-labs/deploy-docker-compose-action@main
