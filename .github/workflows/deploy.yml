@@ -55,3 +55,15 @@ jobs:
           filter: 'label=AIMED_LABS=true'
           docker-file-name: 'docker-compose.beta.yml'
           ssh-private-key-base64: ${{ secrets.REPO__SERVER_SSH_PRIVATE_KEY_BASE64 }}
+          
+      - name: Deploy www
+        uses: aimed-labs/deploy-docker-compose-action@main
+        if: ${{ inputs.deploy-www }}
+        with:
+          project-name: 'website_www'
+          working-directory: ./
+          host-address: ${{ secrets.REPO__SERVER_IP }}
+          host-ssh-user: ${{ secrets.REPO__SERVER_USER }}
+          filter: 'label=AIMED_LABS=true'
+          docker-file-name: 'docker-compose.www.yml'
+          ssh-private-key-base64: ${{ secrets.REPO__SERVER_SSH_PRIVATE_KEY_BASE64 }}   
