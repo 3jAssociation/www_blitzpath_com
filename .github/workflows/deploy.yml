@@ -34,7 +34,7 @@ jobs:
           
       - name: Deploy Prod
         uses: aimed-labs/deploy-docker-compose-action@main
-        if: ${{ inputs.deploy-beta }}
+        if: ${{ inputs.deploy-prod }}
         with:
           project-name: 'website_beta'
           working-directory: ./
@@ -46,7 +46,7 @@ jobs:
           
       - name: Deploy Beta
         uses: aimed-labs/deploy-docker-compose-action@main
-        if: ${{ inputs.deploy-prod }}
+        if: ${{ inputs.deploy-beta }}
         with:
           project-name: 'website_prod'
           working-directory: ./
