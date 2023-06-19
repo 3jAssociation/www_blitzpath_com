@@ -30,7 +30,7 @@ jobs:
       - name: "Build frontend"
         run: |
           npm install --force
-          CI=false npm run build
+          && CI=false npm run build
           
       - name: Deploy Prod
         uses: aimed-labs/deploy-docker-compose-action@main
