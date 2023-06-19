@@ -36,8 +36,8 @@ jobs:
         uses: aimed-labs/deploy-docker-compose-action@main
         if: ${{ inputs.deploy-prod }}
         with:
-          project-name: 'langing_website'
-          working-directory: ./app
+          project-name: 'website_beta'
+          working-directory: ./
           host-address: ${{ secrets.REPO__SERVER_IP }}
           host-ssh-user: ${{ secrets.REPO__SERVER_USER }}
           filter: 'label=AIMED_LABS=true'
@@ -48,8 +48,8 @@ jobs:
         uses: aimed-labs/deploy-docker-compose-action@main
         if: ${{ inputs.deploy-prod }}
         with:
-          project-name: 'langing_website'
-          working-directory: ./app
+          project-name: 'website_prod'
+          working-directory: ./
           host-address: ${{ secrets.REPO__SERVER_IP }}
           host-ssh-user: ${{ secrets.REPO__SERVER_USER }}
           filter: 'label=AIMED_LABS=true'
