@@ -8,12 +8,10 @@
 
 <IfModule mod_rewrite.c>
    
-
-      RewriteEngine On
-
-      RewriteCond %{HTTP_HOST} !^www.example.com$ [NC]
-
-      RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301]
+RewriteEngine on
+RewriteBase /
+rewritecond %{http_host} ^blitzpath.in [nc]
+rewriterule ^(.*)$ http://www.blitzpath.in/$1 [r=301,nc]
 
   
 
