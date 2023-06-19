@@ -4,7 +4,22 @@
 # RewriteOptions inherit
 
 
+
+
 <IfModule mod_rewrite.c>
+   
+
+      RewriteEngine On
+
+      RewriteCond %{HTTP_HOST} !^www.example.com$ [NC]
+
+      RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301]
+
+  
+
+
+
+
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://www.blitzpath.in/$1 [R,L]
