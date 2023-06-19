@@ -34,7 +34,7 @@ jobs:
 
       - name: Copy .htaccess
         run: |
-          cp .htaccess
+          cp .htaccess www_blitzpath_com/.htaccess
 
       - name: Deploy Prod
         uses: aimed-labs/deploy-docker-compose-action@main
