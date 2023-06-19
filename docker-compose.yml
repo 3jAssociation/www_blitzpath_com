@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  website:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - VIRTUAL_HOST=blitzpath.in
+      - LETSENCRYPT_HOST=blitzpath.in
+      - LETSENCRYPT_EMAIL=contact@blitzpath.in
+    network_mode: bridge
+    restart: always
