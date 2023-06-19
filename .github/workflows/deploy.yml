@@ -34,7 +34,7 @@ jobs:
 
       - name: Copy .htaccess
         run: |
-          cp path/to/your/.htaccess ./
+          cp htaccess
 
       - name: Deploy Prod
         uses: aimed-labs/deploy-docker-compose-action@main
