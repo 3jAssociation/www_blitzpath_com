@@ -38,6 +38,7 @@ function Navbar({isDarkMode,setIsDarkMode}) {
                 <li><Link to="/about/#about">About Us</Link></li>
                 <li><Link to="/career">Careers</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
+                <button className='loginbutton'><li><Link to="http://app.blitzpath.in/">Login</Link></li></button>
             </ul>
         </nav>
         <nav className='mobile-device'>
@@ -57,6 +58,7 @@ function Navbar({isDarkMode,setIsDarkMode}) {
                   <span onClick={handleOpen}><Link to="/about">About Us</Link></span>
                   <span onClick={handleOpen}><Link to="/career">Careers</Link></span>
                   <span onClick={handleOpen}><Link to="/contact">Contact</Link></span>
+                  <span onClick={handleOpen}><Link to="http://app.blitzpath.in/">Login</Link></span>
                 </div>
               </div>
             </div>
