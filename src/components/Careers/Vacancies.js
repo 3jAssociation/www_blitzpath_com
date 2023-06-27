@@ -23,7 +23,7 @@ function Vacancies({index,data}) {
           </h1>
         </div>
         <div className="apply_button">
-          <Link to="/apply">
+          <Link to={data[index].job_description=="Technical Expert"?"https://app.blitzpath.in/register":'/apply'}>
             <button >Apply</button>
           </Link>
         </div>
