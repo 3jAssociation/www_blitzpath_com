@@ -1,9 +1,9 @@
 import styles from "./location.module.css";
 import { useEffect } from "react";
 
-import MapImg1 from "../../../images/benguluru.png";
-import MapImg2 from "../../../images/jabalpur.png";
-import MapImg3 from "../../../images/Dubai.png";
+import MapImg1 from "../../../images/benguluru.webp";
+import MapImg2 from "../../../images/jabalpur.webp";
+import MapImg3 from "../../../images/Dubai.webp";
 import location from "../../../images/location.png";
 import { Link } from "react-router-dom";
 const Location = () => {
