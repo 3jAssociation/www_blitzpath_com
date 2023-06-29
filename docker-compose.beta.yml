@@ -6,8 +6,8 @@ services:
       context: ./
       dockerfile: Dockerfile
     environment:
-      - VIRTUAL_HOST=beta.blitzpath.in
-      - LETSENCRYPT_HOST=beta.blitzpath.in
+      - VIRTUAL_HOST=www.blitzpath.in
+      - LETSENCRYPT_HOST=www.blitzpath.in
       - LETSENCRYPT_EMAIL=contact@blitzpath.in
     network_mode: bridge
     restart: always
