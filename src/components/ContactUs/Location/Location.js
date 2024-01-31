@@ -18,15 +18,15 @@ const Location = () => {
         "https://www.google.com/maps/place/Blitzpath+Innovation/@12.9784596,77.7110461,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae13ef7e9298f5:0x2266ff5453e8de78!8m2!3d12.9784596!4d77.7132348!16s%2Fg%2F11p0mw_y70",
       image: MapImg1,
     },
-    {
-      Primary: "Jabalpur, India",
-      Secondary: "#36/37, IT Park, Bargi Hills Jabalpur (M.P.), 482003",
-      phone: "Phone: +91-7777871037",
-      Email: "Email: info@blitzpath.in",
-      location:
-        "https://www.google.com/maps/place/3J+Associate+Technology+Services/@23.1289437,79.8797406,18.29z/data=!4m14!1m7!3m6!1s0x3981b3a7a741aaf3:0x369322ccbae5d977!2s3J+Associate+Technology+Service!8m2!3d23.1293316!4d79.8806731!16s%2Fg%2F11pgkcf2xm!3m5!1s0x3981b398f1fd4c85:0x5dd9b396a36de953!8m2!3d23.1297222!4d79.8810364!16s%2Fg%2F11n2h9376v",
-      image: MapImg2,
-    },
+    // {
+    //   Primary: "Jabalpur, India",
+    //   Secondary: "#36/37, IT Park, Bargi Hills Jabalpur (M.P.), 482003",
+    //   phone: "Phone: +91-7777871037",
+    //   Email: "Email: info@blitzpath.in",
+    //   location:
+    //     "https://www.google.com/maps/place/3J+Associate+Technology+Services/@23.1289437,79.8797406,18.29z/data=!4m14!1m7!3m6!1s0x3981b3a7a741aaf3:0x369322ccbae5d977!2s3J+Associate+Technology+Service!8m2!3d23.1293316!4d79.8806731!16s%2Fg%2F11pgkcf2xm!3m5!1s0x3981b398f1fd4c85:0x5dd9b396a36de953!8m2!3d23.1297222!4d79.8810364!16s%2Fg%2F11n2h9376v",
+    //   image: MapImg2,
+    // },
     {
       Primary: "Abu Dhabi, UAE",
       Secondary: "Building 22, Unit No. 003 Al Reef Down Town,Abu Dhabi. ",
