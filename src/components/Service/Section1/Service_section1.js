@@ -13,8 +13,7 @@ function Section1() {
           Our specialized IT services are tailored for our clients
 We prioritize the unique needs of each individual client
 Our expertise spans across various domains
-Including Information technology, Consulting, and Analytics
-Our user-centric approach ensures optimal solutions.
+Including Information technology, Consulting, and Analytics.
           </h1>
         </div>
       </div>
