@@ -30,12 +30,17 @@ const Location = () => {
     //{
     //  Primary: "Abu Dhabi, UAE",
      // Secondary: "Building 22, Unit No. 003 Al Reef Down Town,Abu Dhabi. ",
+   // {
+     // Primary: "Abu Dhabi, UAE",
+      //Secondary: "Building 22, Unit No. 003 Al Reef Down Town,Abu Dhabi. ",
       //phone: "Phone: +971-0529041605",
       //Email: "Email: info@blitzpath.in",
       //location:
        // "https://www.google.com/maps/place/Al+Reef+Downtown/@24.4570255,54.6732983,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5e49476b5a77a7:0x974eadceb4928af8!8m2!3d24.4570255!4d54.6732983!16s%2Fg%2F11f61sy13x",
       //image: MapImg3,
     //},
+     // image: MapImg3,
+   // },
   ];
   useEffect(() => {
     window.scrollTo(0, 0);
