@@ -8,7 +8,7 @@ function Footer() {
   
     <footer>
     <div className='Left-content'>
-    <p>Copyright &copy; 2023 {width<400 ? <br/> : ''}  Blitzpath Innovations | Powered by Blitzpath Innovations |</p>
+    <p>Copyright &copy; 2026 {width<400 ? <br/> : ''}  Blitzpath Innovations | Powered by Blitzpath Innovations |</p>
     </div>
     
     {/* <div className='right-content'>
