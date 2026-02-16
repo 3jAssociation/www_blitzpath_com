@@ -12,7 +12,7 @@ const Location = () => {
       Primary: "Bangalore, India",
       Secondary:
         "Block 1B, RMZ NXT, EPIP, Whitefield Main Rd, Bengaluru, Karnataka 560066.",
-      phone: " Phone: +91-9901705959",
+      phone: " +91-9901705959",
       Email: "Email: info@blitzpath.in",
       location:
         "https://www.google.com/maps/place/Blitzpath+Innovation/@12.9784596,77.7110461,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae13ef7e9298f5:0x2266ff5453e8de78!8m2!3d12.9784596!4d77.7132348!16s%2Fg%2F11p0mw_y70",
@@ -97,7 +97,11 @@ const Location = () => {
                         <h1>{item.Primary}</h1>
                       </div>
                       <p>{item.Secondary}</p>
-                      <p>{item.phone}</p>
+                      <p>
+                        <a href={`tel:${item.phone}`} className={styles.phoneLink}>
+                          Phone: {item.phone}
+                        </a>
+                      </p>
                       <p>
                         <a
                           className={styles.emailLink}
