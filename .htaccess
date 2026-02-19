@@ -13,9 +13,6 @@ RewriteBase /
 rewritecond %{http_host} ^blitzpath.in [nc]
 rewriterule ^(.*)$ http://www.blitzpath.in/$1 [r=301,nc]
 
-  
-
-
 
 
 RewriteEngine On
