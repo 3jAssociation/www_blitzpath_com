@@ -1,0 +1,32 @@
+
+
+
+# RewriteOptions inherit
+
+
+
+
+<IfModule mod_rewrite.c>
+   
+RewriteEngine on
+RewriteBase /
+rewritecond %{http_host} ^blitzpath.in [nc]
+rewriterule ^(.*)$ http://www.blitzpath.in/$1 [r=301,nc]
+
+
+
+RewriteEngine On
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.blitzpath.in/$1 [R,L]
+
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
+
+</IfModule>
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^blitzpath\.in$ "https\:\/\/blitzpath\.in\/" [R=301,L]
