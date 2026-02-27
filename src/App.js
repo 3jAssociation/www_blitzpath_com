@@ -14,6 +14,7 @@ import Form from './components/Careers/email';
 import Service from "./components/Service/Service";
 import Customer from "./components/Customer_Stories/Customer"
 import Vacancies from "./components/Careers/Vacancies";
+import ThankYouPage from "./components/ThankYouPage/ThankYouPage";
 
 // import DayNightToggle from 'react-day-and-night-toggle'
 function App() {
@@ -130,6 +131,8 @@ function App() {
             <Route  path = "/contact" element = {<Contact isDarkMode={isDarkMode}/>}/>
             <Route  path = "/apply" element = {<Form isDarkMode={isDarkMode} data={data} index={index}/>}/>
             <Route  path = "/career/:id" element = {<Vacancies index={index} data={data}/>}/>
+			<Route path="/thank-you" element={<ThankYouPage />} />
+			
             <Route   element = {<div>Page not found</div>}></Route>
           </Routes>
           <Footer />
