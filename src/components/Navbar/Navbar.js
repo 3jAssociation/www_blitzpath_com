@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
-import logo from '../../images/Blitzpath.jpeg'
-import logo1 from '../../images/Blitzpathlogo.jpeg'
+import logo from '../../images/image_logo.png'
+//import logo1 from '../../images/image_logo.png'
 import {Link} from 'react-router-dom'
 import "./Navbar.css"
 // import DayNightToggle from 'react-day-and-night-toggle'
@@ -22,14 +22,10 @@ function Navbar({isDarkMode,setIsDarkMode}) {
         <div className="logo-section">
           <div className="logo">
           <Link to="/">
-            <img src={logo1} onClick={handleOpen} name='image' alt="" />
-            </Link>
-            </div>
-            <div className="logo1">
-            <Link to="/">
             <img src={logo} onClick={handleOpen} name='image' alt="" />
             </Link>
             </div>
+           
         </div>
         <nav className='desktop-device'>
             <ul  className='navlink'>
