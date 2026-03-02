@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /feed/
-Sitemap: https://www.blitzpath.in/sitemap.xml
+Sitemap: https://www.blitzpath.in/sitemap.xml 
