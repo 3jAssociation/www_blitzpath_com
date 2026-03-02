@@ -1,26 +1,15 @@
 name: "Deploy (Prod/Beta) Website"
 
 on:
-  # Auto deploy when code is pushed
-  push:
-    branches:
-      - master
-
-  # Optional: build-test on PR (no deploy)
-  pull_request:
-    branches:
-      - master
-
-  # Manual deploy (kept)
   workflow_dispatch:
     inputs:
       deploy-prod:
-        description: "Deploy to Production"
+        description: ''
         required: true
         type: boolean
         default: false
       deploy-beta:
-        description: "Deploy to Beta"
+        description: ''
         required: true
         type: boolean
         default: true
@@ -35,20 +24,12 @@ jobs:
       run:
         shell: bash
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
 
-      # Ensure node is available + consistent
-      - name: Setup Node
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "18"
-          cache: "npm"
-
-      - name: Build frontend
+      - name: "Build frontend"
         run: |
-          npm ci --force || npm install --force
+          npm install --force
           CI=false npm run build
 
           echo "RewriteEngine on" >> .htaccess
@@ -56,28 +37,26 @@ jobs:
           echo "RewriteCond %{HTTP_HOST} ^blitzpath.in [NC]" >> .htaccess
           echo "RewriteRule ^(.*)$ http://www.blitzpath.in/$1 [R=301,L]" >> .htaccess
 
-      # Deploy PROD: only if manual input deploy-prod=true
       - name: Deploy Prod
         uses: aimed-labs/deploy-docker-compose-action@main
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy-prod }}
+        if: ${{ inputs.deploy-prod }}
         with:
-          project-name: "website_prod"
+          project-name: 'website_beta'
           working-directory: ./
           host-address: ${{ secrets.REPO__SERVER_IP }}
           host-ssh-user: ${{ secrets.REPO__SERVER_USER }}
-          filter: "label=AIMED_LABS=true"
-          docker-file-name: "docker-compose.prod.yml"
+          filter: 'label=AIMED_LABS=true'
+          docker-file-name: 'docker-compose.prod.yml'
           ssh-private-key-base64: ${{ secrets.REPO__SERVER_SSH_PRIVATE_KEY_BASE64 }}
 
-      # Deploy BETA: auto deploy on push OR manual input deploy-beta=true
       - name: Deploy Beta
         uses: aimed-labs/deploy-docker-compose-action@main
-        if: ${{ (github.event_name == 'push') || (github.event_name == 'workflow_dispatch' && inputs.deploy-beta) }}
+        if: ${{ inputs.deploy-beta }}
         with:
-          project-name: "website_beta"
+          project-name: 'website_prod'
           working-directory: ./
           host-address: ${{ secrets.REPO__SERVER_IP }}
           host-ssh-user: ${{ secrets.REPO__SERVER_USER }}
-          filter: "label=AIMED_LABS=true"
-          docker-file-name: "docker-compose.beta.yml"
+          filter: 'label=AIMED_LABS=true'
+          docker-file-name: 'docker-compose.beta.yml'
           ssh-private-key-base64: ${{ secrets.REPO__SERVER_SSH_PRIVATE_KEY_BASE64 }}
