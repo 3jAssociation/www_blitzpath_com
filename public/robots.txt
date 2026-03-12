@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /feed/
+Disallow: /tags/
 Sitemap: https://www.blitzpath.in/sitemap.xml 
