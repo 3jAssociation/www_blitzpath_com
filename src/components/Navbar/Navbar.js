@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
-import logo from '../../images/image_logo.png'
-//import logo1 from '../../images/image_logo.png'
+import logo from '../../images/big-logo-png.jpeg'
 import {Link} from 'react-router-dom'
 import "./Navbar.css"
 // import DayNightToggle from 'react-day-and-night-toggle'
